@@ -1,0 +1,36 @@
+{
+  "name": "discount-function",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "typegen": "shopify app function typegen",
+    "build": "shopify app function build",
+    "preview": "shopify app function run",
+    "test": "vitest run"
+  },
+  "codegen": {
+    "schema": "schema.graphql",
+    "documents": "src/*.graphql",
+    "generates": {
+      "./generated/api.ts": {
+        "plugins": [
+          "typescript",
+          "typescript-operations"
+        ]
+      }
+    },
+    "config": {
+      "omitOperationSuffix": true
+    }
+  },
+  "devDependencies": {
+    "vitest": "4.0.9",
+    "@graphql-codegen/cli": "5.0.5",
+    "@graphql-codegen/typescript": "4.1.6",
+    "@graphql-codegen/typescript-operations": "4.6.1"
+  },
+  "dependencies": {
+    "@shopify/shopify_function": "2.0.0"
+  }
+}

@@ -15,7 +15,8 @@
   },
   "dependencies": {},
   "trustedDependencies": [
-    "@shopify/plugin-cloudflare"
+    "@shopify/plugin-cloudflare",
+    "esbuild"
   ],
   "author": "diego.maeoka",
   "private": true
